@@ -30,6 +30,7 @@ public class Admin extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -129,7 +130,7 @@ public class Admin extends javax.swing.JFrame {
     //chooser.setAcceptAllFileFilterUsed(false);
     
     if(chooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) { 
-     Student.getI.saveData(chooser.getSelectedFile()+".psv");
+     Teacher.saveData(chooser.getSelectedFile()+".psv");
      
       
       }
@@ -149,7 +150,7 @@ public class Admin extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Teacher T = new Teacher();
+        TeacherList T = new TeacherList();
         T.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -189,6 +190,7 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
