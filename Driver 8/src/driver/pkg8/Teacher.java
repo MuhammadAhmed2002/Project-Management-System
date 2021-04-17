@@ -5,19 +5,24 @@
  */
 package driver.pkg8;
 
+
+import java.io.FileWriter;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author M AHMAD
  */
 public class Teacher extends javax.swing.JFrame {
-
+   
     /**
-     * Creates new form Teacher
+     * Creates new form ListMain
      */
     public Teacher() {
         initComponents();
     }
-
+      
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,100 +32,299 @@ public class Teacher extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        name = new javax.swing.JLabel();
+        nameTxt = new javax.swing.JTextField();
+        addBtn = new javax.swing.JButton();
+        Update = new javax.swing.JButton();
+        contactTxt = new javax.swing.JTextField();
+        emailTxt = new javax.swing.JTextField();
+        groupTxt = new javax.swing.JTextField();
+        contact = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
+        group = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        savde = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Teacher");
+        name.setText(" Name");
 
-        jLabel2.setText("Name");
-
-        jLabel3.setText("Contact");
-
-        jLabel5.setText("Assign To group");
-
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        addBtn.setText("Add");
+        addBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                addBtnActionPerformed(evt);
             }
         });
 
-        jLabel6.setText(" Address");
+        Update.setText("Update");
+        Update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdateActionPerformed(evt);
+            }
+        });
+
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailTxtActionPerformed(evt);
+            }
+        });
+
+        contact.setText(" Contact");
+
+        email.setText(" Email");
+
+        group.setText(" Group Assigned");
+
+        jLabel4.setText("        Add/Delete Teacher");
 
         jButton1.setText("Save");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jTable1.setBackground(new java.awt.Color(255, 255, 51));
+        jTable1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jTable1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Name", "Contact", "Email", "Group Assigned"
+            }
+        ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTable1);
+
+        jMenu1.setText("File");
+
+        savde.setSelected(true);
+        savde.setText("Save");
+        savde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                savdeActionPerformed(evt);
+            }
+        });
+        jMenu1.add(savde);
+
+        jCheckBoxMenuItem2.setSelected(true);
+        jCheckBoxMenuItem2.setText("Close");
+        jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jCheckBoxMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(236, 236, 236)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE))
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(139, 139, 139)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
+                                .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(group, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(contactTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(emailTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(groupTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addComponent(Update, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(208, 208, 208)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(215, Short.MAX_VALUE))
+                        .addGap(123, 123, 123)
+                        .addComponent(jButton1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(53, Short.MAX_VALUE))
+                            .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(contactTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(group, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(groupTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(56, 56, 56)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(addBtn)
+                            .addComponent(Update))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
+         // TODO add your handling code here:
+       if(nameTxt.getText().equals("")||contactTxt.getText().equals("")||emailTxt.getText().equals("")||groupTxt.getText().equals("")){    
+         JOptionPane.showMessageDialog(this,"Enter all details") ;
+       }else{
+           String data[] = {nameTxt.getText(),contactTxt.getText(),emailTxt.getText(),groupTxt.getText()};
+           
+           DefaultTableModel TM;
+           TM = (DefaultTableModel)jTable1.getModel();
+           TM.addRow(data);
+           nameTxt.setText("");
+           contactTxt.setText("");
+           emailTxt.setText("");
+           groupTxt.setText("");
+       }
+    }//GEN-LAST:event_addBtnActionPerformed
+ 
+    private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+     DefaultTableModel TM;
+     TM = (DefaultTableModel)jTable1.getModel();
+     if(jTable1.getSelectedRowCount() ==1){
+         String name;
+         name = nameTxt.getText();
+         String contact;
+         contact = contactTxt.getText();
+         String email;
+         email = emailTxt.getText();
+         String group;
+         group = groupTxt.getText();
+       TM.setValueAt(name,jTable1.getSelectedRow(),0);
+       TM.setValueAt(contact,jTable1.getSelectedRow(),1);
+       TM.setValueAt(email,jTable1.getSelectedRow(),2);
+       TM.setValueAt(group,jTable1.getSelectedRow(),3);
+       JOptionPane.showMessageDialog(this, "Update Successful");
+     }
+    }//GEN-LAST:event_UpdateActionPerformed
+
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtActionPerformed
+
+    private void savdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savdeActionPerformed
+        // TODO add your handling code here:
+         String name=nameTxt.getText();
+        String contact=contactTxt.getText();
+        String email=emailTxt.getText();
+        String group=groupTxt.getText();
+        try
+        {
+            FileWriter File = new  FileWriter("Teacher.txt",true);
+            File.write("Name:"+name+"Contact:"+contact+"Email:"+email+"Address:"+group);
+            File.write(System.getProperty("line.separator"));
+            File.close();
+            JOptionPane.showMessageDialog(null,"File Saved");
+            setVisible(false);
+            new Teacher().setVisible(true);
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "");
+        }
+    }//GEN-LAST:event_savdeActionPerformed
+
+    private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String name=nameTxt.getText();
+        String contact=contactTxt.getText();
+        String email=emailTxt.getText();
+        String group=groupTxt.getText();
+        try
+        {
+            FileWriter File = new  FileWriter("Teacher.txt",true);
+            File.write("Name:"+name+"Contact:"+contact+"Email:"+email+"Address:"+group);
+            File.write(System.getProperty("line.separator"));
+            File.close();
+            JOptionPane.showMessageDialog(null,"File Saved");
+            setVisible(false);
+            new Teacher().setVisible(true);
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel TM;
+        TM = (DefaultTableModel)jTable1.getModel();
+        String TMName;
+        TMName = TM.getValueAt(jTable1.getSelectedRow(),  0).toString();
+        String TMContact;
+        TMContact = TM.getValueAt(jTable1.getSelectedRow(),1).toString();
+        String TMEmail;
+        TMEmail = TM.getValueAt(jTable1.getSelectedRow(),  2).toString();
+        String TMGroup;
+        TMGroup = TM.getValueAt(jTable1.getSelectedRow(), 3).toString();
+        
+        nameTxt.setText(TMName);
+        contactTxt.setText(TMContact);
+        emailTxt.setText(TMEmail);
+        groupTxt.setText(TMGroup);
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -139,18 +343,21 @@ public class Teacher extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Teacher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Teacher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Teacher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Teacher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
+
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+
             public void run() {
                 new Teacher().setVisible(true);
             }
@@ -158,15 +365,29 @@ public class Teacher extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Update;
+    private javax.swing.JButton addBtn;
+    private javax.swing.JLabel contact;
+    private javax.swing.JTextField contactTxt;
+    private javax.swing.JLabel email;
+    private javax.swing.JTextField emailTxt;
+    private javax.swing.JLabel group;
+    private javax.swing.JTextField groupTxt;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel name;
+    private javax.swing.JTextField nameTxt;
+    private javax.swing.JCheckBoxMenuItem savde;
     // End of variables declaration//GEN-END:variables
+
+   
+
+    
+    
 }

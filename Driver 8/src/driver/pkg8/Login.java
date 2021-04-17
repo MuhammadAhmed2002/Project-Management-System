@@ -27,9 +27,23 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+
+        jMenu3.setText("jMenu3");
+
+        jMenu4.setText("jMenu4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,6 +54,8 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(51, 51, 51));
+        jButton3.setForeground(new java.awt.Color(102, 153, 0));
         jButton3.setText("Login Page");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,31 +70,49 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jMenu1.setText("File");
+
+        jCheckBoxMenuItem2.setSelected(true);
+        jCheckBoxMenuItem2.setText("Close");
+        jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jCheckBoxMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(143, 143, 143)
+                .addGap(224, 224, 224)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addGap(66, 66, 66)
                 .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addGap(72, 72, 72))
+                .addGap(115, 115, 115))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton3)
-                .addGap(71, 71, 71)
+                .addGap(72, 72, 72)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
-                .addContainerGap(172, Short.MAX_VALUE))
+                    .addComponent(jButton4)
+                    .addComponent(jButton2))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
 
         pack();
@@ -91,8 +125,8 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Student S = new Student();
-        S.setVisible(true);
+        StudentGroup G = new StudentGroup();
+        G.setVisible(true);
                 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -101,6 +135,11 @@ public class Login extends javax.swing.JFrame {
         Admin A = new Admin();
         A.setVisible(true); 
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,5 +180,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
